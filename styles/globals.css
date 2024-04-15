@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #0072f5;
+  --secondary-color: #3F51B5;
+  --heading: #BBBCCD;
+}
+
+
+:root {
+  --aries-gradient: linear-gradient(45deg, #FF0000, #FFD700);
+  /* Red to Gold */
+  --taurus-gradient: linear-gradient(45deg, #008000, #FFC0CB);
+  /* Green to Pink */
+  --gemini-gradient: linear-gradient(45deg, #FFFF00, #90EE90);
+  /* Yellow to Light Green */
+  --cancer-gradient: linear-gradient(45deg, #C0C0C0, #FFFFFF);
+  /* Silver to White */
+  --leo-gradient: linear-gradient(45deg, #FFD700, #FFA500);
+  /* Gold to Orange */
+  --virgo-gradient: linear-gradient(45deg, #000080, #808080);
+  /* Navy Blue to Gray */
+  --libra-gradient: linear-gradient(45deg, #87CEEB, #FFC0CB);
+  /* Pastel Blue to Pink */
+  --scorpio-gradient: linear-gradient(45deg, #800000, #000000);
+  /* Burgundy to Black */
+  --sagittarius-gradient: linear-gradient(45deg, #800080, #0000CD);
+  /* Purple to Dark Blue */
+  --capricorn-gradient: linear-gradient(45deg, #8B4513, #000000);
+  /* Brown to Black */
+  --aquarius-gradient: linear-gradient(45deg, #00CED1, #20B2AA);
+  /* Turquoise to Aqua Blue */
+  --pisces-gradient: linear-gradient(45deg, #2E8B57, #9370DB);
+  /* Sea Green to Lavender */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Romanesco&display=swap');
+
+
+/* ===================================================== */
+html,
+body {
+  padding: 0;
+  margin: 0;
+
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.image {
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-style {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.h1{
+  color: black;
+}
+
+.paragraph{
+  color: black;
+  margin-bottom: 5%;
+}
+
+.h3{
+  color: grey;
+}
