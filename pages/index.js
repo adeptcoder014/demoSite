@@ -19,7 +19,7 @@ export default function Home() {
         </div>
 
         <div className="container">
-          <p className="paragraph centerText">If you'd like to explore further, please sign up!</p>
+          <p className="paragraph centerText">If you like to explore further, please sign up!</p>
           <button onClick={handleSignup} className="btn">
             Sign Up
           </button>

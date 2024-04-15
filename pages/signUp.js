@@ -41,7 +41,7 @@ export default function SignUp() {
         router.push("/success-screen"); // Redirect to success page after signup
       } else {
         const errorData = await response.json();
-        console.log('errorData --',errorData);
+        console.log('errorData --', errorData);
         console.error("Signup failed:", errorData?.message);
         Swal.fire({
           icon: 'error',
@@ -65,12 +65,15 @@ export default function SignUp() {
     <div className="container center">
       <div className="container-style">
         <div style={{ marginBottom: 25 }}>
-          <h1 className="h1 centerText">Your Astrological Map Awaits</h1>
-          <h3 className="h3 centerText">Enter Your Birth Information</h3>
+          {/* <h1 className="h1 centerText">Your Astrological Map Awaits</h1> */}
+          {/* <h3 className="h3 centerText">Enter Your Birth Information</h3> */}
         </div>
 
         <div className="container">
-          <h2>Sign Up Form</h2>
+          <div style={{textAlign:'center'}}>
+
+            <h2>Sign Up Form</h2>
+          </div>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name:</label>
