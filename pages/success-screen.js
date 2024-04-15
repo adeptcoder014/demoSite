@@ -31,15 +31,15 @@ export default function SuccessScreen() {
       if (response.ok) {
         const data = await response.json();
         console.log("User signed up:", data.user);
-        router.push("/success"); // Redirect to success page after signup
+        router.push("/success"); 
       } else {
         const errorData = await response.json();
         console.error("Signup failed:", errorData.error);
-        // Handle error appropriately (e.g., show error message to user)
+      
       }
     } catch (error) {
       console.error("Error signing up:", error);
-      // Handle error appropriately (e.g., show error message to user)
+      
     }
   };
 

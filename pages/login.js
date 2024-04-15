@@ -35,7 +35,7 @@ export default function Login() {
       if (response.ok) {
         const data = await response.json();
         console.log("User logged in:", data?.token);
-        Cookies.set("token", data?.token); // Store JWT token in cookies
+        Cookies.set("token", data?.token); 
         Swal.fire({
           icon: "success",
           title: "Success",

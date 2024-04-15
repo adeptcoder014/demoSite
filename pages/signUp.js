@@ -9,9 +9,9 @@ export default function SignUp() {
     name: "",
     email: "",
     phone: "",
-    password: "", // Added password field
+    password: "", 
   });
-  const [loading, setLoading] = useState(false); // Initialize loading state
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,7 +40,7 @@ export default function SignUp() {
           title: 'Success',
           text: 'User signed up successfully!',
         });
-        router.push("/success-screen"); // Redirect to success page after signup
+        router.push("/success-screen"); 
       } else {
         const errorData = await response.json();
         console.log('errorData --', errorData);
@@ -50,7 +50,7 @@ export default function SignUp() {
           title: 'Oops...',
           text: errorData?.message,
         });
-        // Handle error appropriately (e.g., show error message to user)
+        
       }
     } catch (error) {
       console.error("Error signing up:", error);
@@ -61,7 +61,7 @@ export default function SignUp() {
       });
      
     }finally {
-      setLoading(false); // Set loading back to false after API call is completed
+      setLoading(false); 
     }
   };
 
@@ -69,8 +69,7 @@ export default function SignUp() {
     <div className="container center">
       <div className="container-style">
         <div style={{ marginBottom: 25 }}>
-          {/* <h1 className="h1 centerText">Your Astrological Map Awaits</h1> */}
-          {/* <h3 className="h3 centerText">Enter Your Birth Information</h3> */}
+         
         </div>
 
         <div className="container">
