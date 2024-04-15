@@ -23,7 +23,7 @@ export default function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true when submitting form
+    setLoading(true);
     try {
       const response = await fetch(`${baseURL}/auth/signup`, {
         method: "POST",
@@ -59,8 +59,8 @@ export default function SignUp() {
         title: 'Oops...',
         text: 'An error occurred while signing up. Please try again later.',
       });
-      // Handle error appropriately (e.g., show error message to user)
-    } finally {
+     
+    }finally {
       setLoading(false); // Set loading back to false after API call is completed
     }
   };
@@ -68,9 +68,6 @@ export default function SignUp() {
   return (
     <div className="container center">
       <div className="container-style">
-        {/* Add loading indicator */}
-        {loading && <div>Loading...</div>}
-        
         <div style={{ marginBottom: 25 }}>
           {/* <h1 className="h1 centerText">Your Astrological Map Awaits</h1> */}
           {/* <h3 className="h3 centerText">Enter Your Birth Information</h3> */}
@@ -78,14 +75,56 @@ export default function SignUp() {
 
         <div className="container">
           <div style={{textAlign:'center'}}>
+
             <h2>Sign Up Form</h2>
           </div>
           <form onSubmit={handleSubmit}>
-            {/* Your form inputs */}
-            {/* ... */}
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="phone">Phone Number:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
             <button type="submit" className="btn" disabled={loading}>
-              {/* Change button text based on loading state */}
-              {loading ? 'Signing Up...' : 'Sign Up'}
+            {loading ? 'Signing Up...' : 'Sign Up'}
             </button>
           </form>
         </div>
